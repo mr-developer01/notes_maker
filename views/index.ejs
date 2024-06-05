@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="form">
+            <h1>Notes Making Web Page!</h1>
+            <form action="/create" method="post">
+                <input type="text" required placeholder="Mention Your Notes Title..." name="title">
+                <textarea required placeholder="Make Notes Here..." name="details"></textarea>
+                <button type="submit">Save Your Note</button>
+            </form>
+        </div>
+        <div class="task">
+            <div class="cards-wrp">
+                <% if (files.length> 0) { %>
+                    <% files.forEach((data)=> { %>
+                        <% let dotIndex = data.lastIndexOf(".") %>
+                        <% let filenameWithoutExtension = data.substring(0, dotIndex) %>
+                        <% let mainTitleWithoutExtension =
+                            filenameWithoutExtension.charAt(0).toUpperCase() +
+                            filenameWithoutExtension.slice(1) %>
+                        <% let individualNames = mainTitleWithoutExtension.match(/[A-Z][a-z]*/g) %>
+                        <% const fileTitle = individualNames.join(" ") %>
+                        <div class="tsk-crd">
+                            <h4>
+                                <%= fileTitle %>
+                            </h4>
+                            <div class="links">
+                                <a href="/readData/<%= data %>">Read more</a>
+                                <a href="/del/<%= data %>">Delete</a>
+                            </div>
+                        </div>
+                    <% }); %>
+                <% } else{ %>
+                    <h3>Create Your First Note Here...</h3>
+                <% } %>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

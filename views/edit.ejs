@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/edit.css">
+</head>
+
+<body>
+    <section>
+        <h1>Update Your Note</h1>
+        <form action="/update" method="post">
+            <input type="text" value="<%= url %>" name="url">
+            <textarea name="updatedText"><%= data %></textarea>
+            <div class="btn">
+                <button type="submit">Update Note</button>
+                <a href="/">All Notes</a>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  color: white;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+section{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2vh 0;
+}
+
+h1{
+    margin-bottom: 2vh;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 50%;
+}
+
+input{
+    padding: 1.5vh 3vw;
+    outline-color: blue;
+    color: black;
+    font-size: 1vw;
+    border-radius: 10px;
+}
+
+textarea{
+    padding: 1.5vh 3vw;
+    height: 20vh;
+    resize: none;
+    outline-color: blue;
+    border-radius: 10px;
+    color: black;
+}
+
+button {
+    /* display: inline-block; */
+    width: fit-content;
+    margin: auto;
+    padding: 5px 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.task{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 100%;
+    padding: 4vh 5vw;
+    /* background-color: red; */
+}
+
+.cards-wrp{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    /* background-color: red; */
+}
+
+.tsk-crd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vh;
+    width: 20vw;
+    height: 10vh;
+    background-color: rgb(84, 107, 237);
+    padding: 1vh 2vw;
+    border-radius: 8px;
+    margin: 10px 21px;
+}
+
+h4{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .8vw;
+    font-weight: 600;
+    letter-spacing: .1vw;
+}
+
+.links{
+    display: flex;
+    gap: 2vw;
+}
